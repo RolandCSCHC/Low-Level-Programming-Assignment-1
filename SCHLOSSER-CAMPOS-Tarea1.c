@@ -426,6 +426,7 @@ int main(int argc, char *argv[]) {
                     while (token != NULL)
                     {
                         printf("%s\n", token);
+                        printf("chao\n");
                         *user_tokens[i] = atoi(token);
                         token = strtok(NULL, " ");
                         i ++;
