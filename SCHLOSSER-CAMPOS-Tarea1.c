@@ -7,6 +7,34 @@
 #define X 10
 #define Y 10
 
+
+/*
+
+Me metí sin querer con pointers en esta tarea y después se buggeo
+y no se pudo arreglar, aún cuando no me sale ningún warning ni nada,
+el programa deja de funcionar y no importa todo lo que investigé o traté
+de hacer, no pude seguir por ese error que no me dejó avanzar en la tarea,
+asi que mandé todo a la punta del cerro. Asumo el 1, perdón.
+¿Qué es lo que hace mi programa?
+Crea el tablero y lo pobla con las dos murallas, gato y ratón de forma aleatoria
+sin que se topen o superpongan. Prácticamente nada, ya que el error está cuando
+le pide al usuario las coordenadas, algo tan simple y tonto pero no me dejó seguir.
+Llegue a la conclusión que algo pasa en la línea 436 con *user_tokens[i] = atoi(token); 
+que el compilador no me dice. Todos los printf() en ese lugar sirvieron para detectar
+en que línea específicamente estaba ocurriendo el error.
+Llega a esa línea y termina el programa de una sin ningún aviso.
+En fin, cuando se me pase la crisis vocacional supongo que intentaré hacer la tarea
+de nuevo en mi tiempo libre.
+Saludos,
+
+*/
+
+
+
+
+
+
+
 // Prints the grid
 void print_grid(char grid[X][Y])
 {
@@ -401,15 +429,15 @@ int main(int argc, char *argv[]) {
                 int i = 0;
                 while (token != NULL)
                 {
-                    // printf("A\n");
-                    // printf("%s\n", token);
-                    // printf("B\n");
+                    printf("A\n");
+                    printf("%s\n", token);
+                    printf("B\n");
                     printf("index: %d\n", i);
                     *user_tokens[i] = atoi(token);
-                    // printf("C\n");
+                    printf("C\n");
                     token = strtok(NULL, " ");
-                    // printf("token: %s\n", token);
-                    // printf("D\n");
+                    printf("token: %s\n", token);
+                    printf("D\n");
                     i ++;
                 }
                 printf("hola\n");
